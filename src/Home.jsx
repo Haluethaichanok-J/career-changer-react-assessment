@@ -3,18 +3,14 @@ import Layout from "./Layout"
 import { v4 as uuidv4 } from 'uuid';
 
 const Home = () => {
-const [sector,setSector] =useState(false)
-const [showUser,setShowUser] = useState(false)
-const [showAdmin,setShowAdmin] = useState(false)
+
 const [employees,setEmployees] =useState([])
-
-
 const [item,setItem] =useState([employees])
-console.log(item)
+
 
 const showEmployee = (item,i) => {
 
-  console.log(item);
+ 
 
   return(
     <tr>
