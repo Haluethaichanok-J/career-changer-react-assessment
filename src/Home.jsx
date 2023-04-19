@@ -2,25 +2,20 @@ import React, {useEffect, useState, Component} from "react"
 import Layout from "./Layout"
 import { v4 as uuidv4 } from 'uuid';
 
-
-
-
-
 const Home = () => {
-// const [employees,setEmployees] = useState('')
 const [sector,setSector] =useState(false)
 const [showUser,setShowUser] = useState(false)
 const [showAdmin,setShowAdmin] = useState(false)
 const [employees,setEmployees] =useState([])
-// console.log(list)
+
 
 const [item,setItem] =useState([employees])
 console.log(item)
 
 const showEmployee = (item,i) => {
-// const newItem = [item];
+
   console.log(item);
-  // console.log(newItem)
+
   return(
     <tr>
 
@@ -36,11 +31,6 @@ employees.map(showEmployee)
 
 
 function deleteItem(id){
- 
-//   const newItem = item.filter(t =>t.id !== id)
-//   console.log(newItem)
-//   setItem(newItem)
-// setEmployees(newItem)
 setEmployees(item.filter(it => it.id !== id))
 }
 
@@ -59,23 +49,7 @@ const showEmployee2 = (item) => {
 employees.map(showEmployee2)
 
 
-// let arr;
-// employees.map(arr);
-// const [a,setA] =useState('');
-// useEffect(()=>{if(showUser === true){
-//   setA('user')
-//   }
-//   else{
-//     setA('')
-//   } 
-// },[showUser])
-//   useEffect(()=>{if(showAdmin === true){
-//       setA('Admin')
-//       }
-//       else{
-//         setA('')
-//       }
-//     },[ showAdmin])
+
 const [name,setName] = useState('');
 const [lastname, setLastName] =useState ('')
 const [position, setPosition] = useState ('')
@@ -99,7 +73,7 @@ const saveItem = (event) =>{
   }
   employees.push({...inputData})
   console.log(employees);
-//console.log(inputData);
+
 setName('')
 setLastName('')
 setPosition('')
@@ -135,13 +109,12 @@ function MyFunc2(){
       <h1>React - Assessment</h1>
     </div>
 <div>
-{/* <button onClick={()=>setShowUser(true)}>User Home Sector</button>
-<button onClick={()=>setShowAdmin(true)}>Admin Home Sector</button> */}
+
 
 <button onClick={MyFunc} >User Home Sector</button>
 <button onClick={MyFunc2} >Admin Home Sector</button>
 </div>
-{/* {a} */}
+
 <div id="table" style={{display: 'none'}}>
   <table>
     <thead>
